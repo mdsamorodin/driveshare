@@ -1,0 +1,62 @@
+@import "app/styles/index";
+
+div.titleWrapper {
+	padding-top: 18px;
+	padding-bottom: 20px;
+	text-align: center;
+
+	@include container-wrapper;
+
+	@include media-breakpoint-md {
+		padding-top: 40px;
+		padding-bottom: 50px;
+	}
+}
+
+.title {
+	margin: 0;
+	font-family: $font-family-philosopher;
+	font-weight: 700;
+
+	@include text-2xl;
+
+	@include media-breakpoint-md {
+		@include text-5xl;
+	}
+
+	@include media-breakpoint-xl {
+		@include text-7xl;
+	}
+}
+
+.subtitle {
+	font-family: $font-family-mulish;
+	font-weight: 600;
+
+	@include text-xl;
+
+	@include media-breakpoint-md {
+		@include text-3xl;
+	}
+
+	@include media-breakpoint-xl {
+		@include text-5xl;
+	}
+}
+
+.content {
+	border-radius: 20px 20px 0 0;
+	background-color: $white-color-light;
+
+	@include media-breakpoint-md {
+		border-radius: 35px 35px 0 0;
+	}
+
+	@include media-breakpoint-xl {
+		border-radius: 50px 50px 0 0;
+	}
+}
+
+.wrapper {
+	@include container-wrapper;
+}

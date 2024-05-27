@@ -1,0 +1,29 @@
+@mixin media-breakpoint-sm {
+	@media (width >= $breakpoint-sm) {
+		@content;
+	}
+}
+
+@mixin media-breakpoint-md {
+	@media (width >= $breakpoint-md) {
+		@content;
+	}
+}
+
+@mixin media-breakpoint-lg {
+	@media (width >= $breakpoint-lg) {
+		@content;
+	}
+}
+
+@mixin media-breakpoint-xl {
+	@media (width >= $breakpoint-xl) {
+		@content;
+	}
+}
+
+@mixin media-breakpoint-2xl {
+	@media (width >= $breakpoint-2xl) {
+		@content;
+	}
+}

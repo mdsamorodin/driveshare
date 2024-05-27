@@ -1,0 +1,103 @@
+@import "app/styles/index";
+
+.filter {
+	display: flex;
+	max-width: 1200px;
+	flex-wrap: wrap;
+	align-items: center;
+	padding: 20px;
+	border-radius: 18px;
+	margin: 0 auto 55px;
+	background-color: $grey-color-opacity;
+	row-gap: 20px;
+
+	@include media-breakpoint-xl {
+		justify-content: space-between;
+		padding-left: 50px;
+		border-radius: 50px;
+	}
+}
+
+.items {
+	display: flex;
+	width: 100%;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	gap: 20px;
+
+	@include media-breakpoint-xl {
+		width: auto;
+	}
+}
+
+.item {
+	flex: 1 1 0%;
+
+	@include media-breakpoint-md {
+		flex: none;
+	}
+
+	@include media-breakpoint-xl {
+		padding: 0 30px;
+		border-right: 1px solid $grey-color;
+
+		&:last-child {
+			padding-right: 0;
+			border-right: none;
+		}
+
+		&:first-child {
+			padding-left: 0;
+		}
+	}
+}
+
+div.select {
+	width: 100%;
+	flex: none;
+	padding-bottom: 12px;
+	border-bottom: 1px solid $grey-color;
+
+	@include media-breakpoint-xl {
+		width: 300px;
+		padding-bottom: 0;
+		border-bottom: none;
+	}
+}
+
+.button {
+	width: 100%;
+	padding: 8px 0;
+	border-radius: 50px;
+
+	@include text-xs;
+
+	@include media-breakpoint-md {
+		padding: 15px 0;
+
+		@include text-base;
+	}
+
+	@include media-breakpoint-xl {
+		width: 62px;
+		height: 62px;
+		padding: 0;
+
+		@include text-xl;
+	}
+}
+
+.buttonIcon {
+	display: none;
+
+	@include media-breakpoint-xl {
+		display: block;
+	}
+}
+
+.buttonText {
+	@include media-breakpoint-xl {
+		display: none;
+	}
+}

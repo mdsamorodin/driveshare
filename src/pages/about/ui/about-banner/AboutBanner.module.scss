@@ -1,0 +1,40 @@
+@import "app/styles/index";
+
+.banner {
+	position: relative;
+}
+
+.image {
+	width: 100%;
+}
+
+.titleBlock {
+	position: relative;
+	top: -50px;
+	width: 90%;
+	padding: 20px;
+	border-radius: 20px;
+	margin: 0 auto;
+	background-color: $white-color;
+	text-align: center;
+
+	@include media-breakpoint-md {
+		padding: 40px;
+		border-radius: 30px;
+	}
+}
+
+.title {
+	margin: 0;
+	font-weight: 700;
+
+	@include text-xl;
+
+	@include media-breakpoint-md {
+		@include text-3xl;
+	}
+
+	@include media-breakpoint-xl {
+		@include text-5xl;
+	}
+}

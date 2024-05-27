@@ -1,0 +1,20 @@
+@import "app/styles/index";
+
+.picker {
+	padding: 0;
+
+	&:global(> .ant-picker-input input) {
+		padding: 0;
+		font-weight: 600;
+
+		@include text-xs;
+
+		@include media-breakpoint-md {
+			@include text-sm;
+		}
+
+		@include media-breakpoint-xl {
+			@include text-xl;
+		}
+	}
+}

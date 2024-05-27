@@ -1,0 +1,108 @@
+@import "app/styles/index";
+
+.promo {
+	display: flex;
+	flex-direction: column-reverse;
+	align-items: center;
+	margin: 100px 0 50px;
+	row-gap: 45px;
+
+	@include media-breakpoint-md {
+		flex-direction: row;
+		margin: 150px 0 100px;
+		gap: 75px;
+	}
+
+	@include media-breakpoint-xl {
+		gap: 150px;
+	}
+}
+
+.content {
+	max-width: none;
+	text-align: center;
+
+	@include media-breakpoint-md {
+		max-width: 350px;
+		text-align: left;
+	}
+
+	@include media-breakpoint-xl {
+		max-width: 500px;
+	}
+}
+
+.imageWrapper {
+	position: relative;
+	text-align: right;
+
+	&::before {
+		position: absolute;
+		top: -7%;
+		left: 0;
+		width: 90%;
+		height: 90%;
+		background-color: $grey-color-brightest;
+		content: "";
+	}
+}
+
+.image {
+	position: relative;
+	width: 95%;
+	margin-left: auto;
+	object-fit: contain;
+}
+
+.title {
+	margin-bottom: 15px;
+	font-weight: 600;
+
+	@include text-xl;
+
+	@include media-breakpoint-md {
+		margin-bottom: 20px;
+
+		@include text-3xl;
+	}
+
+	@include media-breakpoint-xl {
+		@include text-4xl;
+	}
+}
+
+.description {
+	margin-bottom: 25px;
+	font-weight: 500;
+
+	@include text-base;
+
+	@include media-breakpoint-md {
+		margin-bottom: 40px;
+
+		@include text-xl;
+	}
+
+	@include media-breakpoint-xl {
+		@include text-2xl;
+	}
+}
+
+.button {
+	padding: 12px 15px;
+	margin: 0 auto;
+	font-weight: 500;
+
+	@include text-sm;
+
+	@include media-breakpoint-md {
+		padding: 15px 20px;
+		margin: 0;
+
+		@include text-base;
+	}
+
+	@include media-breakpoint-xl {
+		@include text-xl;
+	}
+}

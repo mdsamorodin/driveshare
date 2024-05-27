@@ -1,0 +1,20 @@
+@import "app/styles/index";
+
+.tabs {
+	:global {
+		.ant-tabs-tab-btn {
+			font-weight: 600;
+			text-transform: uppercase;
+
+			@include text-xs;
+
+			@include media-breakpoint-md {
+				@include text-sm;
+			}
+
+			@include media-breakpoint-xl {
+				@include text-xl;
+			}
+		}
+	}
+}

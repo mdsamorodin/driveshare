@@ -1,0 +1,82 @@
+@import "app/styles/index";
+
+.label {
+	display: inline-block;
+	margin-bottom: 2px;
+	color: $grey-color;
+	font-weight: 700;
+
+	@include text-xs;
+
+	@include media-breakpoint-md {
+		margin-bottom: 4px;
+
+		@include text-sm;
+	}
+
+	@include media-breakpoint-xl {
+		margin-bottom: 12px;
+
+		@include text-base;
+	}
+}
+
+.searchSelect {
+	:global {
+		width: 100%;
+
+		.ant-select-selector {
+			padding: 0 !important;
+			border: none !important;
+			background: none !important;
+			box-shadow: none !important;
+		}
+
+		.ant-select-selection-search {
+			inset-inline-start: 0 !important;
+		}
+
+		.ant-select-arrow {
+			right: 0;
+		}
+
+		.ant-select-selection-item {
+			padding-inline-end: 30px !important;
+		}
+
+		.ant-select-selection-item,
+		.ant-select-selection-search > input {
+			font-weight: 600;
+
+			@include text-xs;
+
+			@include media-breakpoint-md {
+				@include text-sm;
+			}
+
+			@include media-breakpoint-xl {
+				@include text-xl;
+			}
+		}
+	}
+}
+
+.arrow {
+	svg {
+		width: 8px;
+		color: $black-color;
+		transition-duration: 0.2s;
+
+		@include media-breakpoint-md {
+			width: 10px;
+		}
+
+		@include media-breakpoint-xl {
+			width: 20px;
+		}
+	}
+
+	&.arrowUp svg {
+		transform: rotate(180deg);
+	}
+}

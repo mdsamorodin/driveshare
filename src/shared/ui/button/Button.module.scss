@@ -1,0 +1,54 @@
+@import "app/styles/index";
+
+.button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 20px 25px;
+	border: none;
+	border-radius: 10px;
+	cursor: pointer;
+	font-weight: 600;
+	gap: 15px;
+	transition: opacity 0.4s ease;
+
+	@include text-xl;
+
+	&.primary {
+		background-color: $primary-color;
+		color: $white-color;
+	}
+
+	&.transparent {
+		background-color: transparent;
+		color: $black-color;
+	}
+
+	&.outline {
+		border: 1px solid $black-color;
+		background-color: transparent;
+		color: $black-color;
+	}
+
+	&.outlinePrimary {
+		border: 1px solid $primary-color;
+		background-color: transparent;
+		color: $primary-color;
+	}
+
+	&.whiteDark {
+		background-color: $white-color-dark;
+		color: $grey-color-dark;
+	}
+
+	&.disabled {
+		opacity: 0.7;
+		pointer-events: none;
+	}
+
+	&:focus {
+		&.disabled {
+			outline: none;
+		}
+	}
+}

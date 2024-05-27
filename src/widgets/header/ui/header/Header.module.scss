@@ -1,0 +1,92 @@
+@import "app/styles/index";
+
+.headerWrapper {
+	position: fixed;
+	z-index: 20;
+	right: 0;
+	left: 0;
+	background-color: $white-color;
+}
+
+.content {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 12px 0;
+	column-gap: 50px;
+
+	@include media-breakpoint-md {
+		padding: 20px 0;
+	}
+
+	@include media-breakpoint-xl {
+		padding: 30px 0;
+	}
+}
+
+.navigation {
+	display: none;
+	flex: 1 1 0%;
+	align-items: center;
+	column-gap: 50px;
+
+	@include media-breakpoint-xl {
+		display: flex;
+	}
+}
+
+.menuWrapper {
+	flex: 1 1 0%;
+
+	.menu {
+		justify-content: flex-end;
+		border-bottom: none;
+	}
+}
+
+.mobileMenuWrapper .mobileMenu {
+	&:global(.ant-menu-root) {
+		border-inline-end: none;
+	}
+
+	&:global > .ant-menu-item-selected,
+	&:global > .ant-menu-item:not(.ant-menu-item-selected):active {
+		background-color: rgba($primary-color, 0.1);
+	}
+}
+
+.button {
+	padding: 12px 18px;
+	font-weight: 500;
+
+	@include text-xl;
+}
+
+.hamburger {
+	width: auto;
+	padding: 10px;
+
+	svg {
+		width: 32px;
+		height: 32px;
+	}
+
+	@include media-breakpoint-xl {
+		display: none;
+	}
+}
+
+.sidebarContent {
+	display: flex;
+	height: 100%;
+	flex-direction: column;
+	justify-content: space-between;
+	padding-right: 10px;
+	padding-bottom: 25px;
+	padding-left: 10px;
+}
+
+.sidebarButton .button {
+	width: 100%;
+}

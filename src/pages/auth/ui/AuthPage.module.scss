@@ -1,0 +1,49 @@
+@import "app/styles/index";
+
+.wrapper {
+	@include container-wrapper;
+}
+
+.title {
+	font-family: $font-family-philosopher;
+	font-weight: 700;
+	text-align: center;
+
+	@include text-xl;
+
+	@include media-breakpoint-md {
+		@include text-3xl;
+	}
+
+	@include media-breakpoint-xl {
+		@include text-5xl;
+	}
+}
+
+.form {
+	max-width: 670px;
+	margin: 0 auto;
+	margin-bottom: 100px;
+}
+
+.redirect {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 20px;
+
+	@include media-breakpoint-md {
+		flex-direction: row;
+	}
+}
+
+.question {
+	font-weight: 500;
+
+	@include text-lg;
+}
+
+.button {
+	padding: 12px 25px;
+}

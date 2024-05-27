@@ -1,0 +1,59 @@
+@import "app/styles/index";
+
+.footer {
+	padding: 48px 0;
+	background-color: $white-color;
+}
+
+.menu {
+	display: grid;
+	margin-bottom: 48px;
+	gap: 15px 40px;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+
+	li {
+		text-align: center;
+
+		@include media-breakpoint-md {
+			&:nth-child(3n + 1) {
+				text-align: left;
+			}
+
+			&:nth-child(3n + 2) {
+				text-align: center;
+			}
+
+			&:nth-child(3n) {
+				text-align: right;
+			}
+		}
+	}
+
+	li a {
+		color: $black-color;
+		font-weight: 600;
+
+		@include text-xs;
+
+		@include media-breakpoint-md {
+			@include text-sm;
+		}
+
+		@include media-breakpoint-xl {
+			@include text-xl;
+		}
+	}
+
+	@include media-breakpoint-md {
+		gap: 20px 50px;
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+	}
+}
+
+.copyright {
+	color: $grey-color-dark;
+	font-weight: 600;
+	text-align: center;
+
+	@include text-base;
+}

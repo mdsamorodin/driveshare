@@ -1,0 +1,70 @@
+@import "app/styles/index";
+
+.owner {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+
+	@include media-breakpoint-md {
+		gap: 14px;
+	}
+
+	@include media-breakpoint-xl {
+		gap: 16px;
+	}
+}
+
+.icon,
+.avatar {
+	border-radius: 50%;
+	background-color: $white-color-dark;
+}
+
+.icon {
+	display: flex;
+	width: 42px;
+	height: 42px;
+	align-items: center;
+	justify-content: center;
+	color: $grey-color-dark;
+
+	@include media-breakpoint-md {
+		width: 50px;
+		height: 50px;
+	}
+}
+
+.avatar {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+}
+
+.userInfo {
+	display: flex;
+	column-gap: 15px;
+
+	@include media-breakpoint-md {
+		flex-direction: column;
+	}
+}
+
+.name,
+.description {
+	font-weight: 500;
+
+	@include text-xs;
+
+	@include media-breakpoint-md {
+		@include text-sm;
+	}
+
+	@include media-breakpoint-xl {
+		@include text-xl;
+	}
+}
+
+.description {
+	color: $grey-color-light;
+}
